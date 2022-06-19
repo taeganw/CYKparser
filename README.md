@@ -44,10 +44,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `taeganw`, `CYKparser`, `taegan-w-b17b7a91`, `Incomplete implementation of the CYK Algorithm`, `CYK Algorithm is a membership algorithm of context free grammar. It is used to decide whether a given string belongs to the language of grammar or not.`
+This project was created in 2019 for a Theory of Computation class. The idea was to create a program to solve any grammar using CYK.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
