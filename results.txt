@@ -1,0 +1,151 @@
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: aaaebbbccc
+-------------------------------------------------------
+[{'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': None, 'value': 'e'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}]
+-------------------------------------------------------
+-------------------------------------------------------
+[{'value': ['AA'], 'result': ['A']}, {'value': ['AA'], 'result': ['A']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC'], 'result': ['D']}, {'value': ['CC'], 'result': ['C']}, {'value': ['CC'], 'result': ['C']}]
+-------------------------------------------------------
+-------------------------
+[{'value': ['AA', 'AA'], 'result': ['A', 'A']}, {'value': ['AB'], 'result': []}, {'value': ['AB', 'BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC', 'DB'], 'result': ['D']}, {'value': ['BC', 'CC'], 'result': ['D', 'C']}]
+-------------------------
+[{'value': ['AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AB', 'BD', 'BB'], 'result': ['B']}, {'value': ['BC', 'BB'], 'result': ['D', 'B']}, {'value': ['BD', 'BC', 'DC', 'DC'], 'result': ['D']}]
+-------------------------
+[{'value': ['AB', 'AB', 'AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AD', 'AB', 'BD', 'BC', 'BB'], 'result': ['S', 'D', 'B']}, {'value': ['BD', 'BC', 'BC', 'DC', 'BC'], 'result': ['D', 'D', 'D']}]
+-------------------------
+[{'value': ['AB', 'AB', 'AB'], 'result': []}, {'value': ['AS', 'AD', 'AB', 'AD', 'AB'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'AD', 'BD', 'BD', 'BC', 'BC', 'SC', 'DC', 'BC'], 'result': ['S', 'S', 'S', 'D', 'D', 'D']}]
+-------------------------
+[{'value': ['AS', 'AS', 'AS', 'AD', 'AB', 'AD', 'AB', 'AD', 'AB'], 'result': ['S', 'S', 'S']}, {'value': ['AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S']}]
+-------------------------
+[{'value': ['AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']}]
+-------------------------
+[]
+-------------------------
+[]
+[[{'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': None, 'value': 'e'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}], [{'value': ['AA'], 'result': ['A']}, {'value': ['AA'], 'result': ['A']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC'], 'result': ['D']}, {'value': ['CC'], 'result': ['C']}, {'value': ['CC'], 'result': ['C']}], [{'value': ['AA', 'AA'], 'result': ['A', 'A']}, {'value': ['AB'], 'result': []}, {'value': ['AB', 'BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC', 'DB'], 'result': ['D']}, {'value': ['BC', 'CC'], 'result': ['D', 'C']}], [{'value': ['AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AB', 'BD', 'BB'], 'result': ['B']}, {'value': ['BC', 'BB'], 'result': ['D', 'B']}, {'value': ['BD', 'BC', 'DC', 'DC'], 'result': ['D']}], [{'value': ['AB', 'AB', 'AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AD', 'AB', 'BD', 'BC', 'BB'], 'result': ['S', 'D', 'B']}, {'value': ['BD', 'BC', 'BC', 'DC', 'BC'], 'result': ['D', 'D', 'D']}], [{'value': ['AB', 'AB', 'AB'], 'result': []}, {'value': ['AS', 'AD', 'AB', 'AD', 'AB'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'AD', 'BD', 'BD', 'BC', 'BC', 'SC', 'DC', 'BC'], 'result': ['S', 'S', 'S', 'D', 'D', 'D']}], [{'value': ['AS', 'AS', 'AS', 'AD', 'AB', 'AD', 'AB', 'AD', 'AB'], 'result': ['S', 'S', 'S']}, {'value': ['AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S']}], [{'value': ['AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']}], [], []]
+******The string is not in the grammar******
+bash-3.2$ python cyk_main.py 
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: aaabbbccc
+-------------------------------------------------------
+[{'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}]
+-------------------------------------------------------
+-------------------------------------------------------
+[{'value': ['AA'], 'result': ['A']}, {'value': ['AA'], 'result': ['A']}, {'value': ['AB'], 'result': []}, {'value': ['BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC'], 'result': ['D']}, {'value': ['CC'], 'result': ['C']}, {'value': ['CC'], 'result': ['C']}]
+-------------------------------------------------------
+-------------------------
+[{'value': ['AA', 'AA'], 'result': ['A', 'A']}, {'value': ['AB'], 'result': []}, {'value': ['AB'], 'result': []}, {'value': ['BB', 'BB'], 'result': ['B', 'B']}, {'value': ['BD', 'BC'], 'result': ['D']}, {'value': ['BC', 'DC'], 'result': ['D']}, {'value': ['CC', 'CC'], 'result': ['C', 'C']}]
+-------------------------
+[{'value': ['AB', 'AB'], 'result': []}, {'value': ['AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['BD', 'BD', 'BC', 'BC'], 'result': ['D', 'D']}, {'value': ['BD', 'BC', 'DC'], 'result': ['D']}, {'value': ['BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}]
+-------------------------
+[{'value': ['AB', 'AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AD', 'AD'], 'result': ['S', 'S']}, {'value': ['BD', 'BD', 'BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}, {'value': ['BD', 'BD', 'BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}]
+-------------------------
+[{'value': ['AB', 'AB', 'AB', 'AB'], 'result': []}, {'value': ['AS', 'AS', 'AD', 'AD'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S']}, {'value': ['BD', 'BD', 'BD', 'BD', 'BC', 'BC', 'BC', 'BC', 'DC', 'DC', 'DC', 'DC'], 'result': ['D', 'D', 'D', 'D']}]
+-------------------------
+[{'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD'], 'result': ['S', 'S', 'S', 'S']}, {'value': ['AS', 'AS', 'AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}]
+-------------------------
+[{'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}, {'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}]
+-------------------------
+[{'value': ['AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']}]
+[[{'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['A'], 'value': 'a'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}, {'result': ['C'], 'value': 'c'}], [{'value': ['AA'], 'result': ['A']}, {'value': ['AA'], 'result': ['A']}, {'value': ['AB'], 'result': []}, {'value': ['BB'], 'result': ['B']}, {'value': ['BB'], 'result': ['B']}, {'value': ['BC'], 'result': ['D']}, {'value': ['CC'], 'result': ['C']}, {'value': ['CC'], 'result': ['C']}], [{'value': ['AA', 'AA'], 'result': ['A', 'A']}, {'value': ['AB'], 'result': []}, {'value': ['AB'], 'result': []}, {'value': ['BB', 'BB'], 'result': ['B', 'B']}, {'value': ['BD', 'BC'], 'result': ['D']}, {'value': ['BC', 'DC'], 'result': ['D']}, {'value': ['CC', 'CC'], 'result': ['C', 'C']}], [{'value': ['AB', 'AB'], 'result': []}, {'value': ['AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['BD', 'BD', 'BC', 'BC'], 'result': ['D', 'D']}, {'value': ['BD', 'BC', 'DC'], 'result': ['D']}, {'value': ['BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}], [{'value': ['AB', 'AB'], 'result': []}, {'value': ['AB', 'AB'], 'result': []}, {'value': ['AD', 'AD'], 'result': ['S', 'S']}, {'value': ['BD', 'BD', 'BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}, {'value': ['BD', 'BD', 'BC', 'BC', 'DC', 'DC'], 'result': ['D', 'D']}], [{'value': ['AB', 'AB', 'AB', 'AB'], 'result': []}, {'value': ['AS', 'AS', 'AD', 'AD'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S']}, {'value': ['BD', 'BD', 'BD', 'BD', 'BC', 'BC', 'BC', 'BC', 'DC', 'DC', 'DC', 'DC'], 'result': ['D', 'D', 'D', 'D']}], [{'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD'], 'result': ['S', 'S', 'S', 'S']}, {'value': ['AS', 'AS', 'AD', 'AD', 'SC', 'SC'], 'result': ['S', 'S']}, {'value': ['AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}], [{'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}, {'value': ['AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S']}], [{'value': ['AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AS', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'AD', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC', 'SC'], 'result': ['S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']}]]
+******The string is in the grammar******
+bash-3.2$ python cyk_dp[Kuplicate.py 
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: a
+-------------------------------------------------------
+[{'result': ['A'], 'value': 'a'}]
+-------------------------------------------------------
+[[{'result': ['A'], 'value': 'a'}]]
+******The string is in the grammar******
+bash-3.2$ python cyk_main.py 
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: d
+-------------------------------------------------------
+[{'result': None, 'value': 'd'}]
+-------------------------------------------------------
+[[{'result': None, 'value': 'd'}]]
+******The string is not in the grammar******
+bash-3.2$ abc[K[K[Kpython cyk_main.py 
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: abc
+-------------------------------------------------------
+[{'result': ['A'], 'value': 'a'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}]
+-------------------------------------------------------
+-------------------------------------------------------
+[{'value': ['AB'], 'result': []}, {'value': ['BC'], 'result': ['D']}]
+-------------------------------------------------------
+-------------------------
+[{'value': ['AD'], 'result': ['S']}]
+[[{'result': ['A'], 'value': 'a'}, {'result': ['B'], 'value': 'b'}, {'result': ['C'], 'value': 'c'}], [{'value': ['AB'], 'result': []}, {'value': ['BC'], 'result': ['D']}], [{'value': ['AD'], 'result': ['S']}]]
+******The string is in the grammar******
+bash-3.2$ python cyk_main.py 
+Line: 0 - S -> AD
+
+Line: 1 - A -> AA | a
+
+Line: 2 - B -> BB | b
+
+Line: 3 - C -> CC | c
+
+Line: 4 - D -> BC
+
+[{'State': 'S', 'Produces': ['AD']}, {'State': 'A', 'Produces': ['AA', 'a']}, {'State': 'B', 'Produces': ['BB', 'b']}, {'State': 'C', 'Produces': ['CC', 'c']}, {'State': 'D', 'Produces': ['BC']}]
+Please input your string to be checked against the grammar: d 
+-------------------------------------------------------
+[]
+-------------------------------------------------------
+-------------------------------------------------------
+[]
+-------------------------------------------------------
+[[], []]
+

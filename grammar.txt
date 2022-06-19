@@ -1,0 +1,6 @@
+# Productions should be of the form S -> AB | a
+S -> AD
+A -> AA | a
+B -> BB | b
+C -> CC | c
+D -> BC
